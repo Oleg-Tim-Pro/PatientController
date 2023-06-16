@@ -1,4 +1,4 @@
-```php
+
 <?php
 
 namespace App\Models;
@@ -10,5 +10,3 @@ class Patient extends Model
     protected $fillable = ['first_name', 'last_name', 'birthdate', 'age', 'age_type'];
 }
 
-
-```
