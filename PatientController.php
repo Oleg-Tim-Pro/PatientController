@@ -6,12 +6,13 @@ namespace App\Http\Controllers;
 use App\Jobs\PerformPatient;
 use App\Models\Patient;
 use Illuminate\Http\Request;
+// Cache - работа с кешом
+use Illuminate\Support\Facades\Cache;
 // Inertia.js - это библиотека для работы с React, Vue
 use Inertia\Inertia;
 // Carbon - библиотека для работы с датами
 use Carbon\Carbon;
-// Cache - работа с кешом
-use Cache;
+
 
 class PatientController extends Controller
 {
