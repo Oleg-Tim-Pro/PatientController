@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
 
 //ProcessPatient - используется для обработки сущности в очереди
