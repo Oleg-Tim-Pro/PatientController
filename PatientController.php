@@ -1,7 +1,7 @@
 <?php
  
 namespace App\Http\Controllers;
-
+ 
 //PerformPatient - используется для обработки сущности в очереди
 use App\Jobs\PerformPatient;
 use App\Models\Patient;
