@@ -16,6 +16,9 @@ use App\Http\Controllers\PatientController;
 |
 */
 
-Route::post('/patients', [PatientController::class, 'store']);
-Route::get('/patients', [PatientController::class, 'index']);
 
+Route::get('/patients', [PatientController::class, 'index']);
+Route::post('/patients', [PatientController::class, 'store']);
+Route::get('/patients', [PatientController::class, 'create']);
+
+// Или можно использовать ресурсный
