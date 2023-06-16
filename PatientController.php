@@ -6,17 +6,17 @@ namespace App\Http\Controllers;
 use App\Jobs\PerformPatient;
 use App\Models\Patient;
 use Illuminate\Http\Request;
-// Cache - работа с кешом
-use Illuminate\Support\Facades\Cache;
 // Inertia.js - это библиотека для работы с React, Vue
+
 use Inertia\Inertia;
 // Carbon - библиотека для работы с датами
 use Carbon\Carbon;
-
+// Cache - работа с кешом
+use Illuminate\Support\Facades\Cache;
 
 class PatientController extends Controller
 {
-     /**
+    /**
      * Получения списка всех пациентов.
      */
     public function index()
@@ -37,9 +37,9 @@ class PatientController extends Controller
                 if ($patient->age_type == 'день') {
                     $patient->age .= ' день';
                 } elseif ($patient->age_type == 'месяц') {
-                    $patient->age .= ' месяц';
+                    $patient->age .= 'месяц';
                 } else {
-                    $patient->age .= ' год';
+                    $patient->age .= 'год';
                 }
             }
             // Сохраняем список пациентов в кеше на 5 минут
@@ -48,7 +48,7 @@ class PatientController extends Controller
 
         return Inertia::render('Patients/Index', ['patients' => $patients]);
     }
- 
+
     /**
      * Отображения формы создания пациента.
      */
