@@ -2,8 +2,8 @@
  
 namespace App\Http\Controllers;
 
-//ProcessPatient - используется для обработки сущности в очереди
-use App\Jobs\ProcessPatient;
+//PerformPatient - используется для обработки сущности в очереди
+use App\Jobs\PerformPatient;
 use App\Models\Patient;
 use Illuminate\Http\Request;
 // Carbon - библиотека для работы с датами
@@ -86,6 +86,6 @@ class PatientController extends Controller
         Cache::put('patient_' . $patient->id, $patient, 300);
 
         // Отправка в очередь для обработки
-        ProcessPatient::dispatch($patient);
+        PerformPatient::dispatch($patient);
     }
 }
